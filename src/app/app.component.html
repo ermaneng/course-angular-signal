@@ -1,0 +1,22 @@
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<ul>
+  <li><a [routerLink]="['simple']">Simple</a></li>
+  <li><a [routerLink]="['mutate']">Mutate</a></li>
+  <li><a [routerLink]="['computed']">Computed</a></li>
+  <li><a [routerLink]="['effects']">Effects</a></li>
+  <li><a [routerLink]="['effects-injector']">Effects Injector</a></li>
+  <li><a [routerLink]="['global-service']">Global Service</a></li>
+</ul>
+
+<form >
+  <fieldset style="background: #f6f8ff; border: 2px solid #4238ca;">
+    <legend>Global Count</legend>
+    <div>Count: {{globalCount()}}</div>
+  </fieldset>
+</form>
+
+
+
