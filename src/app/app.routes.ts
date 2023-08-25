@@ -6,6 +6,7 @@ import { EffectsComponent } from './components/04effects/effects.component';
 import { EffectsInjectorComponent } from './components/05effects-injector/effects-injector.component';
 import { GlobalServiceComponent } from './components/06global-service/global-service.component';
 import { UserListComponent } from './components/07user-list/user-list.component';
+import { EqualityComponent } from './components/08equality/equality.component';
 
 export const routes: Routes = [
     {path:"simple", component: SimpleComponent},
@@ -15,4 +16,5 @@ export const routes: Routes = [
     {path:"effects-injector", component: EffectsInjectorComponent},
     {path:"global-service", component: GlobalServiceComponent},
     {path:"user-list", component: UserListComponent},
+    {path:"equality", component: EqualityComponent},
 ];
