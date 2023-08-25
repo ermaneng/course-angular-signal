@@ -1,0 +1,7 @@
+table > tr:nth-child(even){
+    background-color: #e9eeff;
+}
+.createPane{
+    padding: 10px;
+    background-color: #e9eeff;
+}

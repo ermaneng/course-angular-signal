@@ -1,0 +1,30 @@
+<form >
+    <fieldset style="background: #f6f8ff; border: 2px solid #4238ca;">
+      <legend>User List</legend>
+      <div class="createPane">
+      <label for="name">Name:</label><input name="name" #name />
+      <label for="name">Email:</label><input name="email" #email />
+      <button type="button" (click)="addUser(name.value,email.value)">Add User</button>
+      </div>
+      <table>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Action</td>
+        </tr>
+        <!--<tr *ngFor="let user of _oldUsers; ">-->
+        <tr *ngFor="let user of users(); ">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td><!--Actions-->
+                <button type="button" (click)="removeUser(user.id)">Remove</button>
+                <button type="button" (click)="updateUser(user.id)">Update</button>
+            </td>
+        </tr>
+      </table>
+
+    </fieldset>
+  </form>
+
+
+
