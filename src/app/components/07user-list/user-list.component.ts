@@ -9,7 +9,8 @@ import { interval } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  styleUrls: ['./user-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserListComponent implements OnInit, OnDestroy {
 

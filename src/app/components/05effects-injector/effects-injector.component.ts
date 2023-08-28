@@ -1,4 +1,4 @@
-import { Component, EffectRef, Injector, WritableSignal, effect, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EffectRef, Injector, WritableSignal, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './effects-injector.component.html',
-  styleUrls: ['./effects-injector.component.css']
+  styleUrls: ['./effects-injector.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EffectsInjectorComponent {
   constructor (private injector:Injector){}

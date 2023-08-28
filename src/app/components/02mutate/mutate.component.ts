@@ -1,4 +1,4 @@
-import { Component, WritableSignal, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, WritableSignal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './mutate.component.html',
-  styleUrls: ['./mutate.component.css']
+  styleUrls: ['./mutate.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MutateComponent {
   person:WritableSignal<Person> = signal({name:"John", age:20});

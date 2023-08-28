@@ -1,4 +1,4 @@
-import { Component, Signal, WritableSignal, computed, effect, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal, WritableSignal, computed, effect, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GlobalSignalService } from 'src/app/services/global-signal.service';
 
@@ -7,7 +7,8 @@ import { GlobalSignalService } from 'src/app/services/global-signal.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './effects.component.html',
-  styleUrls: ['./effects.component.css']
+  styleUrls: ['./effects.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EffectsComponent {
  

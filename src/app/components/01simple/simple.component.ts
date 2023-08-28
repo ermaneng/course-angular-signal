@@ -1,4 +1,4 @@
-import { Component, WritableSignal, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, WritableSignal, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './simple.component.html',
-  styleUrls: ['./simple.component.css']
+  styleUrls: ['./simple.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SimpleComponent {
   text:WritableSignal<string> = signal("my text");

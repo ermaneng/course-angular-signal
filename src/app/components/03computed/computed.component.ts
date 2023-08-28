@@ -1,4 +1,4 @@
-import { Component, Signal, WritableSignal, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal, WritableSignal, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './computed.component.html',
-  styleUrls: ['./computed.component.css']
+  styleUrls: ['./computed.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ComputedComponent {
   height:WritableSignal<number> = signal(5);
